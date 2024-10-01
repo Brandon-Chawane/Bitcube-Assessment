@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="Reports.Listener"/>
+    </listeners>
+    <test name="Chrome">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="https://qainterview.pythonanywhere.com/"/>
+        <classes>
+            <class name="Test.TC001">
+                <methods>
+                    <include name="titleValidationTest"/>
+                    <include name="privacyURLTest"/>
+                    <include name="termsURLTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
